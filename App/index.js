@@ -35,7 +35,7 @@ const AuthStackScreen = () => {
       />
     </AuthStack.Navigator>
   );
-}
+};
 
 //Main2 shows the current user info
 const HomeStack = createStackNavigator();
@@ -47,8 +47,8 @@ const HomeStackScreen = () => {
       ({ title: route.params.name })}
         />
     </HomeStack.Navigator>
-  )   
-}
+  );  
+};
 
 const TeamsStack = createStackNavigator();
 const TeamsStackScreen = () => {
@@ -57,8 +57,8 @@ const TeamsStackScreen = () => {
       <TeamsStack.Screen name="Teams" component={Teams} />
       <TeamsStack.Screen name="Teams2" component={Teams2} />
     </TeamsStack.Navigator>
-  )
-}
+  );
+};
 
 //Main3 shows the 
 const PointsStack = createStackNavigator();
@@ -68,8 +68,8 @@ const PointsStackScreen = () => {
       <PointsStack.Screen name="Points" component={Points} />
       <PointsStack.Screen name="Points2" component={Points2} />
     </PointsStack.Navigator>
-  )
-}
+  );
+};
 
 //Main1 holds the signIn, CreateAccount, signOut screens
 const LoginStack = createStackNavigator();
@@ -78,8 +78,8 @@ const LoginStackScreen = () => {
     <LoginStack.Navigator>
       <LoginStack.Screen name="Login" component={Login} />
     </LoginStack.Navigator>
-  )
-}
+  );
+};
 
 //this is the bottom navigation
 const Tabs = createBottomTabNavigator();
@@ -89,8 +89,8 @@ const TabsScreen = () => {
       <Tabs.Screen name="Points" component={PointsStackScreen} />
       <Tabs.Screen name="Teams" component={TeamsStackScreen} />
     </Tabs.Navigator>
-  )
-}
+  );
+};
 
 //this is the left side navigation
 const Drawer = createDrawerNavigator();
@@ -102,8 +102,8 @@ const DrawerScreen = ({ userToken }) => {
       <Drawer.Screen name="Points" component={TabsScreen} />
       
     </Drawer.Navigator>
-  )
-}
+  );
+};
 
 //If user is signed in open App Screen else open Auth Screen
 //options={{animationEnabled: false}} turns off inbetween screen animations
@@ -117,8 +117,8 @@ const RootStackScreen = ({ userToken }) => {
         <RootStack.Screen name="Auth" component={AuthStackScreen} />
       )}
     </RootStack.Navigator>
-  )
-}
+  );
+};
 
 //Tracks if a user is signed in
 export default () => {

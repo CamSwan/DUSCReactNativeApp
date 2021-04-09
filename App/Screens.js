@@ -103,7 +103,7 @@ export const Points2 = () => {
     <ScreenContainer>
       <Text>Points2 Screen</Text>
     </ScreenContainer>
-  )
+  );
 };
 
 export const Login = ({ navigation }) => {
@@ -129,8 +129,8 @@ export const Splash = () => {
     <ScreenContainer>
       <Text>Loading...</Text>
     </ScreenContainer>
-  )
-}
+  );
+};
 
 export const SignIn = ({ navigation }) => {
   const { signIn } = React.useContext(AuthContext);
