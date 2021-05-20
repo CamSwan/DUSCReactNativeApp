@@ -1,3 +1,4 @@
+//Imports
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -16,7 +17,7 @@ import {
   Teams2, 
   Details,   
   Splash, 
-} from "./Screens";
+} from "./screens";
 
 //screen to log in or create an account
 const AuthStack = createStackNavigator();
@@ -100,7 +101,6 @@ const DrawerScreen = ({ userToken }) => {
       <Drawer.Screen name="Login" component={LoginStackScreen} />
       <Drawer.Screen name="Home" component={HomeStackScreen} />
       <Drawer.Screen name="Points" component={TabsScreen} />
-      
     </Drawer.Navigator>
   );
 };
@@ -162,3 +162,4 @@ export default () => {
     </AuthContext.Provider>
   )
 };
+//End Index.js

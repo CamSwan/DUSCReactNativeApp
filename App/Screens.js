@@ -1,26 +1,25 @@
+//Imports
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 
 import { AuthContext } from "./context";
 
+//Stylesheet
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',  
+    alignItems: 'center', 
   },
-  button: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    marginVertical: 10,
-    borderRadius: 5,
-  }
+ 
 });
 
+//Reusable Screen Container
 const ScreenContainer = ({children}) => (
   <View style={styles.container}>{children}</View>
 );
 
+//Home Screen
 export const Home = ({ navigation }) => (
   <ScreenContainer>
     <Text>Master List Screen</Text>
@@ -41,6 +40,7 @@ export const Home = ({ navigation }) => (
   </ScreenContainer>
 );
 
+//Details Screen
 export const Details = ({ route }) => {
   return (
     <ScreenContainer>
@@ -50,6 +50,7 @@ export const Details = ({ route }) => {
   )
 };
 
+//Teams Screen
 export const Teams = ({ navigation }) => {
   return (
     <ScreenContainer>
@@ -70,6 +71,7 @@ export const Teams = ({ navigation }) => {
   );
 };
 
+//Teams2 Screen
 export const Teams2 = () => {
   return (
     <ScreenContainer>
@@ -78,6 +80,7 @@ export const Teams2 = () => {
   )
 };
 
+//Points Screen
 export const Points = ({ navigation }) => {
   return (
     <ScreenContainer>
@@ -98,6 +101,7 @@ export const Points = ({ navigation }) => {
   );
 };
 
+//Points2 Screen
 export const Points2 = () => {
   return (
     <ScreenContainer>
@@ -106,6 +110,7 @@ export const Points2 = () => {
   );
 };
 
+//Login Screen
 export const Login = ({ navigation }) => {
   const { signOut } = React.useContext(AuthContext);
 
@@ -124,6 +129,7 @@ export const Login = ({ navigation }) => {
   );
 };
 
+//Load Screen
 export const Splash = () => {
   return (
     <ScreenContainer>
@@ -132,6 +138,7 @@ export const Splash = () => {
   );
 };
 
+//SignIn Screen
 export const SignIn = ({ navigation }) => {
   const { signIn } = React.useContext(AuthContext);
 
@@ -150,6 +157,7 @@ export const SignIn = ({ navigation }) => {
   );
 };
 
+//Create Account Screen
 export const CreateAccount = () => {
   const { signUp } = React.useContext(AuthContext);
 
@@ -163,3 +171,4 @@ export const CreateAccount = () => {
     </ScreenContainer>
   );
 };
+//End Screens
